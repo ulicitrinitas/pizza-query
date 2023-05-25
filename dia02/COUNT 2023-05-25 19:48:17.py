@@ -40,7 +40,7 @@
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC SELECT *
+# MAGIC SELECT
 # MAGIC FROM silver.pizza_query.produto
 # MAGIC WHERE descItem LIKE '%laranja%'
 
@@ -57,6 +57,17 @@
 # MAGIC ORDER BY qtdePedidos DESC
 # MAGIC
 # MAGIC LIMIT 10
+
+# COMMAND ----------
+
+# MAGIC %sql
+# MAGIC SELECT descUF, flKetchup, count(*)
+# MAGIC FROM silver.pizza_query.pedido
+# MAGIC
+# MAGIC WHERE flKetchup
+# MAGIC
+# MAGIC GROUP BY descUF, flKetchup
+# MAGIC ORDER BY descUF, flKetchup
 
 # COMMAND ----------
 
